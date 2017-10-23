@@ -56,8 +56,7 @@ class Append
             $pid = $item->getProductId();
             $prod = $this->_customShippingHelper->getProductById($pid);
             $package_id = $prod->getAttributeText('package_id');
-            //if ($package_id == 'hazmat' || $package_id == 'oversized') {
-	//if (strtolower($package_id) == 'hazmat' || strtolower($package_id) == 'oversize' || || strtolower($package_id) == 'oversized') {
+            
 	if (strtolower($package_id) != '') {
                 $heavyWeightFlag = true;
                 continue;
